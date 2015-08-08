@@ -7,7 +7,10 @@ module.exports = function(grunt){
             },
             build: {
                 src: 'client/scripts/app.js',
-                dest: 'server/public/assets/scripts/app.min.js'
+                dest: 'server/public/assets/scripts/app.min.js',
+                src: 'client/scripts/secret.js',
+                dest: 'server/public/assets/scripts/secret.min.js'
+
             }
         },
         copy: {

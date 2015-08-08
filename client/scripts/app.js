@@ -58,9 +58,9 @@ function appendToDom(data) {
         var $el = $('#writeData').children().last();
         $el.append("<p>" + data[i].name + "</p>");
         $el.append("<p>" + data[i].message + "</p>");
-        //if(id == "/secret") {
-            $el.append("<button data-id='" + data[i]._id + "'> delete </button>");
-        }
-        //$(".writeData").append("<div class = 'foundData'><p>" + data[i].name + "</p></div>");
-    //}
+        ////if(id == "/secret") {
+        //    $el.append("<button data-id='" + data[i]._id + "'> delete </button>");
+        //}
+        ////$(".writeData").append("<div class = 'foundData'><p>" + data[i].name + "</p></div>");
+    }
 }
