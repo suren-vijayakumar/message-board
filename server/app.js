@@ -7,7 +7,7 @@ var app = express();
 var things = require('./routes/things');
 var index = require('./routes/index');
 
-var mongoURI = "mongodb://localhost:27017/lecture";
+var mongoURI = "mongodb://localhost:27017/weekend4_mongo";
 var mongoDB = mongoose.connect(mongoURI).connection;
 
 mongoDB.on('error', function(err){
