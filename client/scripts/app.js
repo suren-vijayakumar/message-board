@@ -14,29 +14,15 @@ $(document).ready(function (){
             }
         });
     });
-
-
-    $("#writeData").on('click', 'button', function(){
-
-        $.ajax({
-            type:"DELETE",
-            url:"/things/" + $(this).data("id"),
-            success: function(){
-                console.log(" He's gone Jim!");
-
-            },
-            error: function(xhr, status){
-                alert("Error: ", status );
-            },
-            complete: function(){
-                console.log("Delete Complete!");
-
-            }
-        });
-        $(this).parent().remove();
-    });
-    getData();
 });
+
+    $("#refresh").on('click', 'button', function(){
+
+        location.reload(true);
+
+    });
+
+
 
 function getData(){
     $.ajax({

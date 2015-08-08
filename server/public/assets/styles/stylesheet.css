@@ -9,13 +9,12 @@ h1{
 
 #inputForm{
     background-color: teal;
-    text-align: left;
+
 
 }
 
 p{
     font-size: 20px;
-    text-align: left;
 }
 
 
@@ -24,10 +23,5 @@ p{
     font-size: 50px;
     font-weight: 300;
     color: gold;
-}
-
-.desc{
-    font-size: 30px;
-    color: ghostwhite;
 }
 

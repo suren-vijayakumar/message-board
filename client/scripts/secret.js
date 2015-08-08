@@ -14,8 +14,13 @@ $(document).ready(function (){
             }
         });
     });
-    //with .data it 'kittyfoofoo'
-    //with the attribute, its dta-kittyfoofoo
+
+    $("#refresh").on('click', 'button', function(){
+
+        location.reload(true);
+
+    });
+
 
 
     $("#writeData").on('click', 'button', function(){
@@ -56,7 +61,7 @@ function appendToDom(data) {
         $el.append("<p>" + data[i].name + "</p>");
         $el.append("<p>" + data[i].message + "</p>");
         $el.append("<p>" + data[i].time + "</p>");
-        $el.append("<button data-id='" + data[i]._id + "'> delete </button>");
+        $el.append("<button class='btn btn-warning btn-lg' data-id='" + data[i]._id + "'> delete </button>");
 
     }
 }
