@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
         <script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/assets/styles/stylesheet.css" />
     </head>
 
     <body>
-        <p>Gracebook</p>
+        <p>Take that Zuck!</p>
         <form id="inputForm" method="POST">
             <label for="name">Name:</label>
             <input name="name" id="name" type="text">
@@ -14,7 +16,7 @@
 
             <label for="message">Your message here:</label>
             <input name="message" id="message" type="text">
-            <input type="submit" id="post" value="post">
+            <input type="submit" id="post"  class='btn btn-warning btn-lg' value="post">
             <input type="refresh" id="refresh" value="refresh">
         </form>
     <div id="writeData">
