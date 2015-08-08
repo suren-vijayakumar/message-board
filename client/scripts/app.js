@@ -40,9 +40,9 @@ function appendToDom(data) {
     for (var i=0; i<data.length; i++) {
         $('#writeData').append("<div></div>")
         var $el = $('#writeData').children().last();
-        $el.append("<p>" + data[i].name + "</p>");
-        $el.append("<p>" + data[i].message + "</p>");
-        $el.append("<p>" + data[i].time + "</p>");
+        $el.append("<p>A post from: " + data[i].name + "</p>");
+        $el.append("<p> Your post: " + data[i].message + "</p>");
+        $el.append("<p> Posted on: " + data[i].time + "</p>");
 
     }
 }
