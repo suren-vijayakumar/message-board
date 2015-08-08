@@ -14,12 +14,10 @@ $(document).ready(function (){
             }
         });
     });
-    //with .data it 'kittyfoofoo'
-    //with the attribute, its dta-kittyfoofoo
 
 
     $("#writeData").on('click', 'button', function(){
-        //var $el = $(this);
+
         $.ajax({
             type:"DELETE",
             url:"/things/" + $(this).data("id"),
@@ -59,9 +57,6 @@ function appendToDom(data) {
         $el.append("<p>" + data[i].name + "</p>");
         $el.append("<p>" + data[i].message + "</p>");
         $el.append("<p>" + data[i].time + "</p>");
-        ////if(id == "/secret") {
-        //    $el.append("<button data-id='" + data[i]._id + "'> delete </button>");
-        //}
-        ////$(".writeData").append("<div class = 'foundData'><p>" + data[i].name + "</p></div>");
+
     }
 }

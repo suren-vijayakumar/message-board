@@ -19,12 +19,10 @@ $(document).ready(function (){
 
 
     $("#writeData").on('click', 'button', function(){
-        //var $el = $(this);
         $.ajax({
             type:"DELETE",
             url:"/things/" + $(this).data("id"),
             success: function(){
-                console.log(" He's gone Jim!");
 
             },
             error: function(xhr, status){
@@ -45,7 +43,6 @@ function getData(){
         type:"GET",
         url: "/things",
         success: function(data){
-            console.log(data);
             appendToDom(data);
         }
     })
