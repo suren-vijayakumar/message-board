@@ -58,6 +58,7 @@ function appendToDom(data) {
         var $el = $('#writeData').children().last();
         $el.append("<p>" + data[i].name + "</p>");
         $el.append("<p>" + data[i].message + "</p>");
+        $el.append("<p>" + data[i].time + "</p>");
         ////if(id == "/secret") {
         //    $el.append("<button data-id='" + data[i]._id + "'> delete </button>");
         //}
