@@ -1,5 +1,5 @@
-$(document).ready(function (){
-    $("#inputForm").submit(function(event){
+$(document).ready(function () {
+    $("#inputForm").submit(function (event) {
         event.preventDefault();
         var formData = $("#inputForm").serialize();
         console.log(formData);
@@ -7,13 +7,14 @@ $(document).ready(function (){
             type: "POST",
             url: "/things",
             data: formData,
-            success: function(data){
+            success: function (data) {
                 console.log(data);
                 getData();
 
             }
         });
     });
+
 });
 
     $("#refresh").on('click', 'button', function(){
@@ -23,13 +24,11 @@ $(document).ready(function (){
     });
 
 
-
 function getData(){
     $.ajax({
         type:"GET",
         url: "/things",
         success: function(data){
-            console.log(data);
             appendToDom(data);
         }
     })
@@ -37,12 +36,13 @@ function getData(){
 
 function appendToDom(data) {
     $('#writeData').empty();
-    for (var i=0; i<data.length; i++) {
-        $('#writeData').append("<div></div>")
+    for (var i = 0; i < data.length; i++) {
+        $('#writeData').append("<div></div>");
         var $el = $('#writeData').children().last();
         $el.append("<p>A post from: " + data[i].name + "</p>");
         $el.append("<p> Your post: " + data[i].message + "</p>");
         $el.append("<p> Posted on: " + data[i].time + "</p>");
+
 
     }
 }
