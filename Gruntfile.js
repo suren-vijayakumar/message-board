@@ -5,13 +5,18 @@ module.exports = function(grunt){
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build: {
+            build1: {
                 src: 'client/scripts/app.js',
-                dest: 'server/public/assets/scripts/app.min.js',
+                dest: 'server/public/assets/scripts/app.min.js'
+
+            },
+            build2: {
+
                 src: 'client/scripts/secret.js',
                 dest: 'server/public/assets/scripts/secret.min.js'
 
             }
+
         },
         copy: {
             jquery: {
@@ -21,14 +26,6 @@ module.exports = function(grunt){
                     "jquery/dist/jquery.min.js"
                 ],
                 "dest": "server/public/vendors/"
-            },
-            bootstrap: {
-                expand: true,
-                cwd: 'node_modules',
-                src: [
-                    "bootstrap/dist/css/bootstrap.min.css"
-                ],
-                "dest":"server/public/vendors/"
             }
         }
     });
