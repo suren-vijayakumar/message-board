@@ -15,8 +15,9 @@ $(document).ready(function () {
 
 
     $("#refresh").on('click', 'button', function(){
-
+        event.preventDefault();
         location.reload(true);
+        getData();
 
     });
 

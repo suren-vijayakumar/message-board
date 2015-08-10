@@ -2,10 +2,11 @@ body {
     font-family: fantasy;
 }
 
-h1{
-    font-size: 60px;
+.h1{
+    font-size: 40px;
     text-align: center;
-    color: #006600;
+    color: yellow;
+    background-color: teal;
 }
 
 #inputForm{
@@ -20,4 +21,8 @@ p{
 }
 
 
+#writeData{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 

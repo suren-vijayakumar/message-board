@@ -13,13 +13,16 @@ $(document).ready(function (){
 
             }
         });
-    });
-
-    $("#refresh").on('click', 'button', function(){
-
+        $("#refresh").on('click', 'button', function(){
+        event.preventDefault();
         location.reload(true);
+        getData();
 
     });
+        getData();
+    });
+
+
 
 
     $("#writeData").on('click', 'button', function(){
@@ -78,7 +81,7 @@ function appendToDom(data) {
         $el.append("<p> Your post: " + data[i].message + "</p>");
         $el.append("<p> Posted on: " + data[i].time + "</p>");
 
-        $el.append("<button class='btn btn-warning btn-lg' data-id='" + data[i]._id + "'> delete </button>");
+        $el.append("<button class='btn btn-danger btn-sm' data-id='" + data[i]._id + "'> delete </button>");
 
     }
 }
