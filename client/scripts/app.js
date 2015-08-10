@@ -7,7 +7,7 @@ $(document).ready(function () {
             url: "/things",
             data: formData,
             success: function (data) {
-                getData();
+                    getData();
 
             }
         });
@@ -25,22 +25,30 @@ $(document).ready(function () {
 
 function getData(){
     $.ajax({
-        type:"GET",
+        type: "GET",
         url: "/things",
-        success: function(data){
-            appendToDom(data);
-        }
-    })
+        success: function (data) {
+
+        appendToDom(data);
+}
+    });
 }
 
 function appendToDom(data) {
-    $('#writeData').empty();
-    for (var i = 0; i < data.length; i++) {
-        $('#writeData').append("<div></div>");
-        var $el = $('#writeData').children().last();
-        $el.append("<p>A post from: " + data[i].name + "</p>");
-        $el.append("<p> Your post: " + data[i].message + "</p>");
-        $el.append("<p> Posted on: " + data[i].time + "</p>");
+    if($.isEmptyObject(data)) {
+        alert("Nothing entered");
+    }
+    else {
+        $('#writeData').empty();
+        for (var i = 0; i < data.length; i++) {
+
+            $('#writeData').append("<div></div>");
+            var $el = $('#writeData').children().last();
+
+            $el.append("<p>A post from: " + data[i].name + "</p>");
+            $el.append("<p> Your post: " + data[i].message + "</p>");
+            $el.append("<p> Posted on: " + data[i].time + "</p>");
+        }
 
     }
 }
