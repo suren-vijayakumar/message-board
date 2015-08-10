@@ -13,14 +13,11 @@ $(document).ready(function () {
         });
     });
 
-
-    $("#refresh").on('click', 'button', function(){
-        event.preventDefault();
+    $("body").on('click', '.refresh', function(){
         location.reload(true);
         getData();
-
     });
-
+getData();
 });
 
 function getData(){
